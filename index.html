@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="heading">Howdy there!</h1>
+    <button onclick="changeText()">Click Me!</button>
+
+    <script>
+        /**
+         * Changes the text of the heading when the button is clicked
+         *
+         * Approach:
+         * - Use `document.getElementById` to target the heading element.
+         * - Update the `textContent` property to change the displayed text.
+         *
+         * Testing:
+         * - Verify the heading updates correctly on button click.
+         * - Edge Cases:
+         *   - Ensure the heading updates even if the text is already the same.
+         */
+        function changeText() {
+            const heading = document.getElementById("heading");
+            heading.textContent = "You clicked the button! Yay!";
+        }
+    </script>
+</body>
+</html>

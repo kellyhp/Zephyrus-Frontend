@@ -1,0 +1,65 @@
+:root {
+    --press-shadow: #422800;
+    --text-color: #333;
+    --background-color: #F9F6EE;
+    --button-border: #422800;
+    --button-hover-bg: #fff;
+    --font-family: 'Inter', Arial, sans-serif;
+    --border-radius: 30px;
+    --transition-speed: 0.2s;
+    --button-shadow: #422800 4px 4px 0 0;
+    --button-active-shadow: #422800 2px 2px 0 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+button {
+    background-color: var(--background-color);
+    border: 2px solid var(--button-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--button-shadow);
+    color: var(--button-border);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    touch-action: manipulation;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-border);
+}
+
+button:active {
+    box-shadow: var(--button-active-shadow);
+    transform: translate(5px, 5px);
+}
